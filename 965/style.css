@@ -1,0 +1,1266 @@
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none;}body{margin:0;}article,aside,footer,header,nav,section{display:block;}h1{font-size:2em;margin:0.67em 0;}figcaption,figure,main{display:block;}figure{margin:1em 40px;}hr{box-sizing:content-box;height:0;overflow:visible;}pre{font-family:monospace, monospace;font-size:1em;}a{background-color:transparent;-webkit-text-decoration-skip:objects;}a:active,a:hover{outline-width:0;}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted;}b,strong{font-weight:inherit;}b,strong{font-weight:bolder;}code,kbd,samp{font-family:monospace, monospace;font-size:1em;}dfn{font-style:italic;}mark{background-color:#ff0;color:#000;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sub{bottom:-0.25em;}sup{top:-0.5em;}audio,video{display:inline-block;}audio:not([controls]){display:none;height:0;}img{border-style:none;}svg:not(:root){overflow:hidden;}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0;}button,input{overflow:visible;}button,select{text-transform:none;}button,html [type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0;}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText;}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em;}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal;}progress{display:inline-block;vertical-align:baseline;}textarea{overflow:auto;}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0;}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto;}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px;}[type="search"]::-webkit-search-cancel-button,[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit;}details,menu{display:block;}summary{display:list-item;}canvas{display:inline-block;}template{display:none;}[hidden]{display:none;}
+
+
+
+/* ===============================================
+
+	D E F A U L T
+	Default styles of browsers
+
+=============================================== */
+*, *:before, *:after {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+/* ===============================================
+
+	C O M M O N
+	General styles
+
+=============================================== */
+html {
+	position: relative;
+}
+
+body {
+	color: #818181;
+	font-size: 14px;
+	line-height: 20px;
+	font-family: Arial, sans-serif;
+	background: #303030;
+}
+
+input, button, select, textarea {
+	font-size: inherit;
+	line-height: inherit;
+	font-family: inherit;
+}
+
+html, body {
+	min-height: 100%;
+	height: 100%;
+}
+
+/* -------------------------------------------
+	Link
+------------------------------------------- */
+a {
+	color: #337ab7;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #23527c;
+	text-decoration: none;
+}
+
+a:focus {
+	outline: thin dotted;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
+/* -------------------------------------------
+	Images
+------------------------------------------- */
+img {
+	vertical-align: middle;
+}
+
+/* -------------------------------------------
+	Position and clear
+------------------------------------------- */
+.clearfix:before, .clearfix:after,
+.container:before, .container:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after, .container:after {
+	clear: both;
+}
+
+/* -------------------------------------------
+	Show and hide block
+------------------------------------------- */
+.hide {
+	display: none !important;
+}
+
+.show {
+	display: block !important;
+}
+
+/* -------------------------------------------
+	Transition
+------------------------------------------- */
+.trn, .trna a {
+	-webkit-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+/* -------------------------------------------
+	Opacity
+------------------------------------------- */
+.opacity-0 {
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.opacity-1 {
+	opacity: 1.0;
+	filter: alpha(opacity=100);
+}
+
+.opacity-5 {
+	opacity: 0.50;
+	filter: alpha(opacity=50);
+}
+
+/* -------------------------------------------
+	Box-shadow
+------------------------------------------- */
+.box-shadow {
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.75);
+}
+
+/* -------------------------------------------
+	User select
+------------------------------------------- */
+.no-select, .age, .pu-age {
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+/* -------------------------------------------
+	List reset
+------------------------------------------- */
+.reset, .reset > li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* -------------------------------------------
+	Text overflow
+------------------------------------------- */
+.to-el {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* -------------------------------------------
+	Font smoothing
+------------------------------------------- */
+.fsmoothing-y {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.fsmoothing-n {
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: auto;
+}
+
+
+
+
+
+/* -------------------------------------------
+	Grid sistem
+------------------------------------------- */
+.container {
+	max-width: 640px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* -------------------------------------------
+	Age
+------------------------------------------- */
+.age {
+	color: #a4a4a4;
+	font-size: 10px;
+	line-height: 10px;
+	top: 4px;
+	left: 3px;
+	position: absolute;
+	z-index: 6;
+}
+
+/* -------------------------------------------
+	Pseudo table
+------------------------------------------- */
+.pseudo-table {
+	width: 100%;
+	/*height: 100%;*/
+	display: table;
+	table-layout: fixed;
+}
+
+.pseudo-table > li {
+	display: table-row;
+}
+
+.pseudo-table > li > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/* -------------------------------------------
+	Button and Price: Pseudo table
+------------------------------------------- */
+.btn-price-pseudo-table {
+	width: 100%;
+	height: 100%;
+	display: table;
+	table-layout: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: fixed;
+	z-index: 4;
+}
+
+.btn-price-pseudo-table > li {
+	display: table-row;
+}
+
+.btn-price-pseudo-table > li > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/* -------------------------------------------
+	Images display: block;
+------------------------------------------- */
+.logo img, .btn-ok-icon img, .cont-item img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* -------------------------------------------
+	Button style
+------------------------------------------- */
+.btn-price-container {
+	text-align: center;
+	position: relative;
+	padding: 0px 5px;
+}
+
+.btn-container {
+	position: relative;
+	padding: 0px;
+}
+
+	/* -------------------------------------------
+		Button
+	------------------------------------------- */
+	.btn {
+		display: block;
+	}
+
+	.btn, .btn:hover {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	.btn-ok-txt, .btn-ok-icon {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+		/* -------------------------------------------
+			btn-ok
+		------------------------------------------- */
+		.btn-ok {
+			max-width: 260px;
+			width: 80%;
+			padding: 2px;
+			margin: 0px auto;
+			background: #83b022;
+			border-radius: 100px;
+		}
+
+		.btn-ok-bg {
+			position: relative;
+			padding: 33px 0px;
+			border-radius: 100px;
+		}
+
+		.btn-ok-txt {
+			font-size: 32px;
+			line-height: 30px;
+			font-weight: bold;
+		}
+
+		.btn-ok-icon {
+			max-width: 30px;
+			margin-left: 15px;
+		}
+
+	/* -------------------------------------------
+		btn-cancel
+	------------------------------------------- */
+	.btn-cancel-container {
+		text-align: center;
+		/*bottom: -60px;*/
+		/*left: 0px;*/
+		/*right: 0px;*/
+		/*position: absolute;*/
+		margin-top: 15px;
+	}
+
+	.btn-cancel, .btn-cancel:hover {
+		color: #5a5a5a;
+	}
+
+	.btn-cancel {
+		height: 20px;
+		display: inline-block;
+		vertical-align: top;
+		font-size: 11px;
+		line-height: 11px;
+		text-align: center;
+		padding: 5px 6px 0px;
+		background: #cecece;
+/*		background: #b7b7b7;*/
+		-webkit-box-shadow: inset 0px 0px 0px 1px #cecece;
+		box-shadow: inset 0px 0px 0px 1px #cecece;
+		border-radius: 10px;
+        color: #313030;
+	}
+
+
+
+
+
+/* -------------------------------------------
+	Height full
+------------------------------------------- */
+.height-full {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: fixed;
+}
+
+/* -------------------------------------------
+	Head
+------------------------------------------- */
+.head {}
+	.head .container {
+		position: relative;
+	}
+
+	/* -------------------------------------------
+		logo
+	------------------------------------------- */
+	.logo {}
+
+/* -------------------------------------------
+	Pop-up
+------------------------------------------- */
+.pu-container {
+	max-width: 320px;
+	color: #4f4f4f;
+	text-align: center;
+	position: relative;
+	padding: 15px 0px;
+	margin: 0px auto;
+	background: #f2f2f2;
+	border-radius: 5px;
+}
+
+	/* -------------------------------------------
+		Pop-up age
+	------------------------------------------- */
+	.pu-age {
+		width: 80px;
+		height: 80px;
+		font-size: 30px;
+		line-height: 40px;
+		font-weight: bold;
+		padding: 18px 0px 0px;
+		margin: 0px auto 12px;
+		border: 4px solid #fa6f54;
+		border-radius: 40px;
+	}
+
+	/* -------------------------------------------
+		Pop-up title
+	------------------------------------------- */
+	.pu-title {
+		font-size: 18px;
+		line-height: 25px;
+		text-transform: uppercase;
+		padding: 0px 0px 0px;
+		margin: 0px 0px 8px;
+	}
+
+	/* -------------------------------------------
+		Pop-up content
+	------------------------------------------- */
+	.pu-content {
+		font-size: 14px;
+		line-height: 18px;
+		padding: 11px 10px 11px;
+		margin: 0px 0px 15px;
+		background: #f9f9f9;
+		-webkit-box-shadow: inset 0px 1px 0px 0px #dadada, inset 0px -1px 0px 0px #dadada;
+		box-shadow: inset 0px 1px 0px 0px #dadada, inset 0px -1px 0px 0px #dadada;
+	}
+
+		.pu-content span {
+			display: block;
+		}
+
+/* -------------------------------------------
+	Content
+------------------------------------------- */
+.content {
+	padding: 5px;
+	margin-top: -10px;
+}
+
+	/* -------------------------------------------
+		Content list
+	------------------------------------------- */
+	.cont-list {}
+		.cont-list li {
+			width: 50%;
+			float: left;
+			padding: 5px;
+		}
+
+		/* -------------------------------------------
+			Content item
+		------------------------------------------- */
+		.cont-item {}
+
+/* -------------------------------------------
+	Footer
+------------------------------------------- */
+.footer {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: fixed;
+	z-index: 5;
+	padding: 2px 1px 2px;
+	background: #303030;
+	/*background: rgba(255,255,255,0.5);*/
+}
+
+.footer *, .rules, .rules * {
+	/*-webkit-font-smoothing: subpixel-antialiased;*/
+	/*-moz-osx-font-smoothing: auto;*/
+}
+
+/* -------------------------------------------
+	Rules
+------------------------------------------- */
+.rules {
+	font-size: 10px;
+	line-height: 10px;
+	text-align: center;
+	letter-spacing: -0.3px;
+}
+
+.rules, .rules a {
+	color: #818181;
+	font-family: Arial, sans-serif;
+}
+
+.rules-top {
+	position: relative;
+	z-index: 5;
+	padding: 2px 1px 2px;
+	background: #303030;
+	/*background: rgba(255,255,255,0.5);*/
+	/*-webkit-font-smoothing: antialiased;*/
+	/*-moz-osx-font-smoothing: grayscale;*/
+}
+
+/* -------------------------------------------
+	Responsive max-width: 768px;
+------------------------------------------- */
+@media (max-width: 768px) {
+
+	.rules {
+		font-size: 9px;
+		line-height: 9px;
+	}
+
+}
+
+
+
+
+
+/* -------------------------------------------
+	Responsive max-width: 280px;
+------------------------------------------- */
+@media (max-width: 280px) {
+
+	/* -------------------------------------------
+		btn-ok
+	------------------------------------------- */
+	.btn-ok {
+		width: 90%;
+	}
+
+	/* -------------------------------------------
+		Pop-up content
+	------------------------------------------- */
+	.pu-content {
+		font-size: 12px;
+		line-height: 14px;
+		padding: 9px 10px 7px;
+	}
+
+		.pu-content span {
+			display: inline;
+		}
+
+}
+
+
+
+
+/* -------------------------------------------
+	Responsive for *** BUTTON *** in table
+------------------------------------------- */
+@media 
+(min-width: 1373px) {
+
+	.btn-price-pseudo-table {
+		padding-top: 14px;
+		padding-bottom: 14px;
+	}
+
+}
+
+@media 
+(min-width: 769px) and (max-width: 1372px) {
+
+	.btn-price-pseudo-table {
+		padding-top: 24px;
+		padding-bottom: 14px;
+	}
+
+}
+
+@media 
+(min-width: 635px) and (max-width: 768px) {
+
+	.btn-price-pseudo-table {
+		padding-top: 22px;
+		padding-bottom: 13px;
+	}
+
+}
+
+@media 
+(min-width: 564px) and (max-width: 634px) {
+
+	.btn-price-pseudo-table {
+		padding-top: 31px;
+		padding-bottom: 13px;
+	}
+
+}
+
+@media 
+(min-width: 432px) and (max-width: 563px) {
+
+	.btn-price-pseudo-table {
+		padding-top: 31px;
+		padding-bottom: 22px;
+	}
+
+}
+
+@media 
+(min-width: 337px) and (max-width: 431px) {
+
+	.btn-price-pseudo-table {
+		padding-top: 40px;
+		padding-bottom: 22px;
+	}
+
+}
+
+@media 
+(min-width: 307px) and (max-width: 336px) {
+
+	.btn-price-pseudo-table {
+		padding-top: 49px;
+		padding-bottom: 22px;
+	}
+
+}
+
+@media 
+(min-width: 281px) and (max-width: 306px),
+(min-width: 264px) and (max-width: 280px) {
+
+	.btn-price-pseudo-table {
+		padding-top: 49px;
+		padding-bottom: 31px;
+	}
+
+}
+
+@media 
+(min-width: 0px) and (max-width: 263px) {
+
+	.btn-price-pseudo-table {
+		padding-top: 58px;
+		padding-bottom: 31px;
+	}
+
+}
+
+
+
+
+
+/* -------------------------------------------
+	Responsive for button max-height
+------------------------------------------- */
+@media (max-height: 549px) {
+
+	.btn-ok-bg {
+		padding: 28px 0;
+	}
+
+}
+
+@media (max-height: 499px) {
+
+	.btn-ok {
+		max-width: 220px;
+	}
+
+	.btn-ok-bg {
+		padding: 23px 0;
+	}
+
+}
+
+@media (max-height: 449px) {
+
+	.btn-ok-bg {
+		/*padding: 18px 0;*/
+	}
+
+}
+
+@media (max-height: 399px) {
+
+	.btn-ok-bg {
+		/*padding: 13px 0;*/
+	}
+
+}
+
+
+
+
+
+/* -------------------------------------------
+	Responsive WEB for max-height 
+------------------------------------------- */
+@media 
+(min-width: 1373px) and (max-height: 0px),
+(min-width: 769px) and (max-width: 1372px) and (max-height: 0px),
+(min-width: 635px) and (max-width: 768px) and (max-height: 0px),
+(min-width: 564px) and (max-width: 634px) and (max-height: 0px),
+(min-width: 432px) and (max-width: 563px) and (max-height: 0px),
+(min-width: 337px) and (max-width: 431px) and (max-height: 0px),
+(min-width: 307px) and (max-width: 336px) and (max-height: 0px),
+(min-width: 281px) and (max-width: 306px) and (max-height: 0px),
+(min-width: 264px) and (max-width: 280px) and (max-height: 0px),
+(min-width: 0px) and (max-width: 263px) and (max-height: 0px) {
+
+
+}
+
+@media 
+(min-width: 1373px) and (max-height: 399px),
+(min-width: 769px) and (max-width: 1372px) and (max-height: 409px),
+(min-width: 635px) and (max-width: 768px) and (max-height: 406px),
+(min-width: 564px) and (max-width: 634px) and (max-height: 415px),
+(min-width: 432px) and (max-width: 563px) and (max-height: 424px),
+(min-width: 337px) and (max-width: 431px) and (max-height: 433px),
+(min-width: 307px) and (max-width: 336px) and (max-height: 442px),
+(min-width: 281px) and (max-width: 306px) and (max-height: 451px),
+(min-width: 264px) and (max-width: 280px) and (max-height: 433px),
+(min-width: 0px) and (max-width: 263px) and (max-height: 442px) {
+
+	/* -------------------------------------------
+		Pop-up age
+	------------------------------------------- */
+	.pu-age {
+		width: 50px;
+		height: 50px;
+		font-size: 18px;
+		line-height: 24px;
+		border: 3px solid #fa6f54;
+		padding-top: 12px;
+	}
+
+}
+
+@media 
+(min-width: 1373px) and (max-height: 369px),
+(min-width: 769px) and (max-width: 1372px) and (max-height: 379px),
+(min-width: 635px) and (max-width: 768px) and (max-height: 376px),
+(min-width: 564px) and (max-width: 634px) and (max-height: 385px),
+(min-width: 432px) and (max-width: 563px) and (max-height: 394px),
+(min-width: 337px) and (max-width: 431px) and (max-height: 403px),
+(min-width: 307px) and (max-width: 336px) and (max-height: 412px),
+(min-width: 281px) and (max-width: 306px) and (max-height: 421px),
+(min-width: 264px) and (max-width: 280px) and (max-height: 403px),
+(min-width: 0px) and (max-width: 263px) and (max-height: 412px) {
+
+	/* -------------------------------------------
+		Pop-up
+	------------------------------------------- */
+	.pu-container {
+		padding: 10px 0px;
+	}
+
+		/* -------------------------------------------
+			Pop-up age
+		------------------------------------------- */
+		.pu-age {
+			padding-top: 12px;
+			margin-bottom: 7px;
+		}
+
+		/* -------------------------------------------
+			Pop-up title
+		------------------------------------------- */
+		.pu-title {
+			margin: 0px 0px 3px;
+		}
+
+		/* -------------------------------------------
+			Pop-up content
+		------------------------------------------- */
+		.pu-content {
+			margin: 0px 0px 10px;
+		}
+
+}
+
+@media 
+(min-width: 1373px) and (max-height: 344px),
+(min-width: 769px) and (max-width: 1372px) and (max-height: 354px),
+(min-width: 635px) and (max-width: 768px) and (max-height: 351px),
+(min-width: 564px) and (max-width: 634px) and (max-height: 360px),
+(min-width: 432px) and (max-width: 563px) and (max-height: 369px),
+(min-width: 337px) and (max-width: 431px) and (max-height: 378px),
+(min-width: 307px) and (max-width: 336px) and (max-height: 387px),
+(min-width: 281px) and (max-width: 306px) and (max-height: 396px),
+(min-width: 264px) and (max-width: 280px) and (max-height: 368px),
+(min-width: 0px) and (max-width: 263px) and (max-height: 387px) {
+
+	/* -------------------------------------------
+		Pop-up
+	------------------------------------------- */
+	.pu-container {
+		padding: 5px 0px 10px;
+	}
+
+		/* -------------------------------------------
+			Pop-up age
+		------------------------------------------- */
+		.pu-age {
+			display: none;
+		}
+
+		/* -------------------------------------------
+			Pop-up content
+		------------------------------------------- */
+		.pu-content {
+			padding: 6px 10px;
+		}
+
+}
+
+@media 
+(min-width: 1373px) and (max-height: 272px),
+(min-width: 769px) and (max-width: 1372px) and (max-height: 282px),
+(min-width: 635px) and (max-width: 768px) and (max-height: 279px),
+(min-width: 564px) and (max-width: 634px) and (max-height: 288px),
+(min-width: 432px) and (max-width: 563px) and (max-height: 297px),
+(min-width: 337px) and (max-width: 431px) and (max-height: 306px),
+(min-width: 307px) and (max-width: 336px) and (max-height: 315px),
+(min-width: 281px) and (max-width: 306px) and (max-height: 324px),
+(min-width: 264px) and (max-width: 280px) and (max-height: 312px),
+(min-width: 0px) and (max-width: 263px) and (max-height: 321px) {
+
+	/* -------------------------------------------
+		Age
+	------------------------------------------- */
+	.age {
+		top: 1px;
+	}
+
+	/* -------------------------------------------
+		Pop-up
+	------------------------------------------- */
+	.pu-container {
+		padding: 10px 0px;
+	}
+
+		/* -------------------------------------------
+			Pop-up title
+		------------------------------------------- */
+		.pu-title {
+			display: none;
+		}
+
+}
+
+@media 
+(min-width: 1373px) and (max-height: 249px),
+(min-width: 769px) and (max-width: 1372px) and (max-height: 259px),
+(min-width: 635px) and (max-width: 768px) and (max-height: 256px),
+(min-width: 564px) and (max-width: 634px) and (max-height: 265px),
+(min-width: 432px) and (max-width: 563px) and (max-height: 320px),
+(min-width: 337px) and (max-width: 431px) and (max-height: 283px),
+(min-width: 307px) and (max-width: 336px) and (max-height: 292px),
+(min-width: 281px) and (max-width: 306px) and (max-height: 301px),
+(min-width: 264px) and (max-width: 280px) and (max-height: 289px),
+(min-width: 0px) and (max-width: 263px) and (max-height: 298px) {
+
+	/* -------------------------------------------
+		Age
+	------------------------------------------- */
+	.age {
+		/*top: 3px;*/
+	}
+
+	/* -------------------------------------------
+		btn-ok
+	------------------------------------------- */
+	.btn-ok-bg {
+		padding: 13px 0;
+	}
+
+	/* -------------------------------------------
+		Pop-up
+	------------------------------------------- */
+	.pu-container {
+		/*padding: 10px 0px;*/
+	}
+
+		/* -------------------------------------------
+			Pop-up content
+		------------------------------------------- */
+		.pu-content {
+			/*display: none;*/
+		}
+		.pu-content {
+			font-size: 10px;
+			line-height: 12px;
+			padding: 3px 10px 3px;
+		}
+
+			.pu-content span {
+				display: inline;
+			}
+
+}
+
+
+
+
+
+/* -------------------------------------------
+	Galaxy S3
+------------------------------------------- */
+/* Portrait */
+@media (width: 360px) 
+and (height: 567px) 
+and (-webkit-device-pixel-ratio: 2) 
+and (orientation: portrait) {
+
+
+}
+
+/* Landscape */
+@media (width: 640px) 
+and (height: 287px) 
+and (-webkit-device-pixel-ratio: 2) 
+and (orientation: landscape) {
+
+
+}
+
+
+
+/* -------------------------------------------
+	iPhone 4 and 4S
+------------------------------------------- */
+/* Portrait */
+@media (width: 320px) 
+and (height: 372px) 
+and (-webkit-min-device-pixel-ratio: 2) 
+and (orientation: portrait) {
+
+	html {
+		position: fixed;
+		background-color: #fff;
+	}
+
+	body {
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		position: fixed;
+	}
+
+}
+
+/* Landscape */
+@media (width: 480px) 
+and (max-height: 320px) 
+and (-webkit-min-device-pixel-ratio: 2) 
+and (orientation: landscape) {
+
+	html {
+		position: fixed;
+		background-color: #fff;
+	}
+
+	body {
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		position: fixed;
+	}
+
+	.rules-bottom {
+		letter-spacing: -0.3px;
+	}
+
+}
+
+
+/* -------------------------------------------
+	iPhone 5, 5S, SE
+------------------------------------------- */
+/* Portrait */
+@media (width: 320px) 
+and (height: 460px) 
+and (-webkit-min-device-pixel-ratio: 2) 
+and (orientation: portrait),
+(width: 320px) 
+and (height: 454px) 
+and (-webkit-min-device-pixel-ratio: 2) 
+and (orientation: portrait) {
+
+	html {
+		position: fixed;
+		background-color: #fff;
+	}
+
+	body {
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		position: fixed;
+	}
+
+}
+
+/* Landscape */
+@media (width: 568px) 
+and (max-height: 320px) 
+and (-webkit-min-device-pixel-ratio: 2) 
+and (orientation: landscape) {
+
+	html {
+		position: fixed;
+		background-color: #fff;
+	}
+
+	body {
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		position: fixed;
+	}
+
+	.rules-bottom {
+		letter-spacing: -0.2px;
+	}
+
+	.btn-price-container {
+		top: -50px;
+	}
+
+	/* -------------------------------------------
+		Age
+	------------------------------------------- */
+	.age {
+		top: 1px;
+	}
+
+	/* -------------------------------------------
+		btn-ok
+	------------------------------------------- */
+	.btn-ok-bg {
+		padding: 18px 0;
+	}
+
+	/* -------------------------------------------
+		Pop-up
+	------------------------------------------- */
+	.pu-container {
+		padding: 10px 0px;
+	}
+
+		/* -------------------------------------------
+			Pop-up title
+		------------------------------------------- */
+		.pu-title {
+			display: none;
+		}
+
+		/* -------------------------------------------
+			Pop-up content
+		------------------------------------------- */
+		.pu-content {
+			font-size: 10px;
+			line-height: 12px;
+			padding: 3px 10px 3px;
+		}
+
+			.pu-content span {
+				display: inline;
+			}
+
+}
+
+
+/* -------------------------------------------
+	iPhone 6, 6S, 7, 8
+------------------------------------------- */
+/* Portrait */
+@media (width: 375px) 
+and (height: 559px) 
+and (-webkit-min-device-pixel-ratio: 2) 
+and (orientation: portrait),
+(width: 375px) 
+and (height: 553px) 
+and (-webkit-min-device-pixel-ratio: 2) 
+and (orientation: portrait) {
+
+	html {
+		position: fixed;
+		background-color: #fff;
+	}
+
+	body {
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		position: fixed;
+	}
+
+}
+
+/* Landscape */
+@media (width: 667px) 
+and (max-height: 375px) 
+and (-webkit-min-device-pixel-ratio: 2) 
+and (orientation: landscape) {
+
+	html {
+		position: fixed;
+		background-color: #fff;
+	}
+
+	body {
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		position: fixed;
+	}
+
+	.btn-price-container {
+		top: -25px;
+	}
+
+	/* -------------------------------------------
+		Pop-up
+	------------------------------------------- */
+	.pu-container {
+		padding: 5px 0px 10px;
+	}
+
+		/* -------------------------------------------
+			Pop-up age
+		------------------------------------------- */
+		.pu-age {
+			display: none;
+		}
+
+		/* -------------------------------------------
+			Pop-up content
+		------------------------------------------- */
+		.pu-content {
+			padding: 6px 10px;
+		}
+
+}
+
+
+/* -------------------------------------------
+	iPhone 6+, 6S+, 7+, 8+
+------------------------------------------- */
+/* Portrait */
+@media (width: 414px) 
+and (height: 628px) 
+and (-webkit-min-device-pixel-ratio: 3) 
+and (orientation: portrait),
+(width: 414px) 
+and (height: 622px) 
+and (-webkit-min-device-pixel-ratio: 3) 
+and (orientation: portrait) {
+
+	html {
+		position: fixed;
+		background-color: #fff;
+	}
+
+	body {
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		position: fixed;
+	}
+
+}
+
+/* Landscape */
+@media (width: 736px) 
+and (max-height: 414px) 
+and (-webkit-min-device-pixel-ratio: 3) 
+and (orientation: landscape) {
+
+
+}
+
+
+
+@media (max-height: 320px) {
+    html {
+        position: relative !important;
+        width: 100%;
+    }
+    body {
+        position: relative !important;
+        width: 100%;
+        background: #303030;
+    }
+    .height-full {
+        position: relative;
+    }
+    .head-container {
+        position: relative;
+    }
+    .btn-price-pseudo-table {
+        display: block;
+        position: relative;
+        padding-top: 10px;
+    }
+    .btn-price-pseudo-table > li {
+        display: block;
+        position: relative;
+    }
+    .btn-price-pseudo-table > li > div {
+        display: block;
+        position: relative;
+    }
+    .container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .footer {
+/*        position: relative;*/
+        margin-top: 10px;
+    }
+}
+
+
+@media (max-height: 240px) {
+    .btn-price-pseudo-table {
+        padding-top: 10px;
+    }
+}
+
+@media screen  
+  and (-webkit-device-pixel-ratio: 2) 
+  and (device-aspect-ratio: 2/3) and (max-height: 320px) {
+    html {
+        position: relative !important;
+        width: 100%;
+    }
+    body {
+        position: relative !important;
+        width: 100%;
+        background: #303030;
+    }
+}
+
+@media screen 
+  and (device-aspect-ratio: 40/71) 
+  and (orientation: landscape) 
+  and (max-height: 320px) {
+    html {
+        position: relative !important;
+        width: 100%;
+    }
+    body {
+        position: relative !important;
+        width: 100%;
+        background: #303030;
+    }
+}
+
+@media (max-height: 240px) {
+    .btn-price-pseudo-table {
+        padding-top: 10px;
+    }
+}

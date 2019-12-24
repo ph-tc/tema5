@@ -1,0 +1,786 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN"
+  "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+  <title>Музыка</title>
+  <style type="text/css">
+    * {
+      margin: 0px;
+      padding: 0px;
+      outline: 0px none;
+      border: 0px none;
+    }
+
+    *, *::before, *::after {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    ul, li {
+      list-style: outside none none;
+    }
+
+    html, body {
+      color: #666;
+      height: 100%;
+      font-family: 'Open Sans', sans-serif;
+      position: relative;
+      background-color: rgb(255, 255, 255);
+      text-align: center;
+      overflow: hidden;
+    }
+
+    body {
+      width: 100%;
+      height: 100%;
+    }
+
+    .autoclear::after {
+      content: ".";
+      display: block;
+      height: 0px;
+      clear: both;
+      visibility: hidden;
+      line-height: 0px;
+      font-size: 0px;
+    }
+
+    .autoclear {
+      display: inline-block;
+    }
+
+    .autoclear {
+      display: block;
+    }
+
+    a, a:link {
+      color: rgb(151, 151, 151);
+      text-decoration: underline;
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: rgb(151, 151, 151);
+    }
+
+    .all {
+      width: 100%; /* min-height: 80%; *//* height: 80%; */
+      position: relative;
+      display: table;
+    }
+
+    .centering {
+      display: table-cell;
+      vertical-align: top;
+      width: 100%;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 920px;
+      margin: 0px auto;
+      position: relative;
+      text-align: left;
+    }
+
+    .contentleft {
+    }
+
+    .filebox {
+      text-align: center;
+      padding-bottom: 50px;
+      position: relative;
+    }
+
+    .btn-wrapper {
+      position: relative;
+    }
+
+    .rating {
+      font-size: 12px;
+      color: rgb(238, 130, 8);
+      text-align: center;
+      display: block;
+      padding-top: 16px;
+      padding-bottom: 10px;
+      display: none;
+    }
+
+    .rating img {
+      display: inline-block;
+      margin-bottom: -3px;
+    }
+
+    .file {
+      clear: both;
+      font-size: 13px;
+      text-align: left;
+      padding: 15px 20px;
+      display: block;
+      margin-bottom: 1px;
+    }
+
+    .search {
+      font-size: 16px;
+      color: #9fa0a0;
+      background-color: #ffffff;
+      border-radius: 3px;
+      outline: 0;
+      display: block;
+      width: 100%;
+      margin: 0 auto 5px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 10px;
+      border: 1px solid #bfbfbf;
+      text-align: left;
+    }
+
+    a.ok_btn {
+      width: 95%;
+      max-width: 400px;
+      overflow: hidden;
+      position: relative;
+      color: #fff;
+      font-size: 20px;
+      display: inline-block;
+      text-decoration: none;
+      padding: 0;
+      margin: 0;
+      border: 0;
+      background: #fff; /* box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.32); */
+      border-radius: 6px;
+    }
+
+    p.btn {
+      padding: 0;
+      color: rgb(255, 255, 255);
+      text-shadow: 1px 1px 0px rgb(61, 147, 235);
+      font-size: 26px;
+      text-decoration: none;
+      margin: 0;
+      text-align: center;
+      display: block;
+    }
+
+    a.btn_cancel {
+      display: block;
+      padding: 6px 15px;
+      font-size: 13px;
+      text-decoration: none;
+      margin: 10px auto 0px;
+      background: #b6b6b6;
+      width: 85px;
+      border-radius: 2px;
+      border: 1px solid #aaaaaa;
+      color: #000;
+      background: #ffeba0; /* border-color: rgba(153,122,0,0.5); */
+    }
+
+    .btn:hover {
+      background: -webkit-gradient(linear, left top, left bottom, from(rgb(64, 160, 254)), to(rgb(47, 130, 255))) repeat scroll 0% 0% transparent;
+      background: -o-linear-gradient(top, rgb(64, 160, 254) 0%, rgb(47, 130, 255) 100%) repeat scroll 0% 0% transparent;
+      background: linear-gradient(to bottom, rgb(64, 160, 254) 0%, rgb(47, 130, 255) 100%) repeat scroll 0% 0% transparent;
+    }
+
+    .btn span {
+      position: relative;
+      text-indent: 9%;
+      font-size: 32px;
+    }
+
+    .btn-left {
+      background-color: #313539;
+      color: #fff;
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+    }
+
+    .btn-right {
+      color: #000;
+      background-color: #fc0;
+      border-top-right-radius: 6px;
+      border-bottm-right-radius: 6px;
+    }
+
+    .btn-right, .btn-left { /* background-position: 0px 0px; *//* padding-left: 40px; *//* height: 100%; *//* position: relative; *//* top: 0; */
+      display: inline-block;
+      width: 100%;
+      padding: 30px 20px;
+    }
+
+
+    .btn-left:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 9px;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 32px;
+      height: 32px;
+      background-color: #ffcc00;
+      background-image: url(img/play.png);
+      background-size: 42%;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 1;
+      border-radius: 50%;
+    }
+
+    .btn-right:before {
+      content: "";
+      position: absolute;
+      top: 29%;
+      left: 11px;
+      width: 32px;
+      height: 32px;
+      background-image: url(img/play2.png);
+      background-size: 67%;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.6;
+    }
+
+    .logo {
+      height: 43px;
+      margin: 0;
+    }
+
+    .topimg {
+      height: 43px;
+      position: absolute;
+      right: 0;
+    }
+
+    .download span {
+      background-image: url('undefined');
+      background-position: 0px 0px;
+      background-repeat: no-repeat;
+      padding-left: 40px;
+    }
+
+    .box {
+      overflow: hidden;
+      border: 0;
+    }
+
+    .topblock {
+      background: #ffffff;
+      display: inline-block;
+      position: absolute;
+      top: 7px;
+      left: 144px;
+      padding: 8px 40px;
+      font-size: 12px;
+      color: #939393;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+
+    .player {
+      display: block;
+      height: 54px;
+      background-image: url(img/player.jpg);
+      background-repeat: no-repeat; /* background-size: auto 100%; */
+      background-position: left center;
+    }
+
+    .contentright {
+    }
+
+    .sidebar {
+      padding: 0;
+      text-align: left;
+      padding: 7px 7px 0;
+    }
+
+    .tracks {
+      padding: 15px;
+      border-top: 1px solid #ccc;
+    }
+
+    .tracks h2 {
+      color: #181818;
+      font-size: 16px;
+      font-weight: normal;
+      margin-bottom: 5px;
+    }
+
+    .tracks ul {
+      color: #676767;
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    .tracks ul span { /* color: #999; */
+    }
+
+    .tracks li {
+      padding: 4px 0; /* background-image: url(icon6.png); */
+      background-repeat: no-repeat;
+      background-position: left center;
+    }
+
+    .title {
+      vertical-align: top;
+    }
+
+    .title img {
+      margin-bottom: -3px;
+      margin-right: 9px;
+      margin-left: 6px;
+    }
+
+    .pop {
+      background-position: 0px 0px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      border: solid 1px rgba(0, 0, 0, 0.2);
+      border-radius: 3.1px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      display: inline-block;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      text-decoration: none;
+      color: #000 !important;
+      white-space: nowrap;
+      outline: 0;
+      margin-bottom: 6px;
+      font-size: 13px;
+      padding: 10px 15px;
+    }
+
+    .s2 {
+      font-size: 14px;
+    }
+
+    .mp3ico {
+      margin-bottom: 6px;
+      width: 100%;
+      height: 145px;
+      background-image: url(img/mp3.jpg);
+      background-size: auto 100%;
+    }
+
+    .footer {
+      text-align: center;
+      border-top: 2px solid #ccc;
+    }
+
+    .no_btn {
+      font-size: 20px;
+      line-height: 100%;
+      padding-top: 15px;
+    }
+
+    .no_btn a {
+      text-decoration: none;
+      background: none repeat scroll 0% 0% rgb(104, 104, 104);
+      color: rgb(238, 238, 238);
+      padding: 5px 10px;
+    }
+
+    .rulez {
+      font-size: 10px;
+      line-height: 100%;
+      display: block;
+      text-align: center;
+      padding: 2px;
+      padding-top: 0;
+    }
+
+    .rulez, .rulez a {
+      color: rgb(68, 68, 68);
+      line-height: 95%;
+    }
+
+    .header {
+      background: #ffffff;
+      color: rgb(255, 255, 255);
+      border: 3px solid #ffcc00;
+    }
+
+    .header span {
+      color: rgb(201, 218, 236);
+    }
+
+    .header img {
+    }
+
+    .tab_head {
+      font-size: 10px;
+      line-height: 90%;
+      padding: 0;
+      text-align: center;
+      background: #fff;
+    }
+
+    .headline {
+      width: 40%;
+      text-align: left;
+      font-size: 30px;
+      line-height: 110%;
+      display: block;
+    }
+
+    @media screen and (max-width: 615px) {
+      .contentright { /* display: none; */
+      }
+
+      .contentleft {
+        width: 100%;
+      }
+
+      .filebox {
+        padding-bottom: 50px;
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      p.btn {
+        width: 95%;
+      }
+
+      td.headline {
+        display: none;
+      }
+
+      .topimg {
+        /* display: none; */
+        margin: 0;
+        right: 0;
+      }
+
+      .topblock {
+        display: none;
+      }
+
+      .file {
+        padding: 9px;
+        font-size: 12px;
+      }
+
+      .search {
+        font-size: 14px;
+        padding: 7px;
+      }
+
+      .footer {
+        position: absolute;
+        bottom: 0;
+        background: #ffffff;
+      }
+
+      .mp3ico {
+        height: 60px;
+        background-size: auto 111%;
+      }
+
+      .pop {
+        font-size: 12px;
+        padding: 5px 8px;
+        margin-bottom: 4px;
+      }
+
+      .tracks {
+        padding: 6px;
+      }
+    }
+
+    @media screen and (max-width: 350px) {
+    }
+
+
+    @media screen and (max-height: 520px) and (orientation: portrait) {
+      .tracks {
+        display: none;
+      }
+
+      .player {
+        height: 48px;
+        /* background-size: 100% auto; */
+      }
+
+      .pop {
+        /* padding: 5px 8px; */
+        /* margin-bottom: 3px; */
+      }
+    }
+
+    @media screen and (max-height: 500px) and (orientation: portrait) {
+      .tracks {
+        display: none;
+      }
+
+      .player {
+        height: 48px;
+        /* background-size: 100% auto; */
+      }
+
+      .pop {
+        padding: 4px 8px;
+      }
+
+      .btn-right, .btn-left {
+        padding: 25px;
+      }
+
+      .logo {
+        height: 35px;
+      }
+
+      .topimg {
+        height: 36px;
+      }
+    }
+
+    @media screen and (max-height: 470px) and (orientation: portrait) {
+      .mp3ico {
+        height: 56px;
+      }
+
+      .player {
+        height: 34px;
+      }
+
+      .pop {
+      }
+
+      .btn-right, .btn-left {
+        padding: 20px;
+      }
+    }
+
+    @media screen and (max-height: 440px) and (orientation: portrait) {
+      .mp3ico {
+        display: none;
+      }
+
+      .sound span {
+        /* padding: 15px; */
+      }
+
+      .player {
+      }
+
+      .pop {
+        padding: 2px 8px;
+      }
+    }
+
+
+    @media screen and (max-width: 240px) {
+      p.btn {
+        font-size: 14px;
+      }
+
+      .header {
+      }
+
+      .rulez, .rulez a {
+        font-size: 9px;
+      }
+
+      .contentright {
+        display: none;
+      }
+
+      .btn-right, .btn-left {
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-height: 700px) and (orientation: landscape) {
+      .tracks {
+        display: none;
+      }
+
+    }
+
+    @media screen and (max-height: 840px) and (orientation: landscape) {
+      .tracks1 {
+        display: none;
+      }
+
+    }
+
+
+    @media screen and (orientation: landscape) {
+      html, body {
+        overflow: auto;
+      }
+
+    }
+
+
+    @media screen and (max-height: 420px) and (orientation: landscape) {
+
+      .mp3ico {
+        display: none;
+      }
+
+      .file {
+        display: none;
+      }
+
+      a.ok_btn {
+        margin-top: 0;
+      }
+
+      .sidebar {
+        padding: 7px 7px 0;
+      }
+
+      .pop {
+        padding: 7px 9px;
+        font-size: 12px;
+      }
+
+      .footer {
+        position: relative;
+      }
+    }
+
+    .price {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+
+    .price p {
+      margin: 0;
+    }
+
+    .price .line2 {
+      display: inline-block;
+      margin: 5px auto 0;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 17px;
+      font-weight: normal;
+      line-height: 17px;
+      background-color: #fff;
+      color: #777;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block !important;
+      height: auto;
+    }
+
+    .rules, .rules a {
+      font-size: 16px;
+      line-height: 13px;
+      text-align: center;
+      color: #777;
+    }
+
+    .rules a {
+      text-decoration: underline;
+    }
+
+    .rules p {
+      margin: 0;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+<div class="all">
+  <div class="centering">
+    <div class="header">
+      <div class="wrap">
+        <img alt="#" src="img/logo.png" class="logo"/>
+        <img alt="#" src="img/topimg.png" class="topimg"/>
+        <div class="topblock">
+          Слушай и качай музыку онлайн
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="box">
+        <div class="content autoclear">
+          <div class="contentright">
+            <div class="sidebar">
+              <p class="title pop">Поп</p>
+              <p class="title pop">Инди</p>
+              <p class="title pop">Рок</p>
+              <p class="title pop">Электроника</p>
+              <p class="title pop">Танцевальная</p>
+              <p class="title pop">Классика</p>
+              <p class="title pop">Шансон</p>
+              <p class="title pop">Кантри</p>
+              <p class="title pop">Джаз</p>
+              <p class="title pop">Блюз</p>
+              <p class="title pop">Ска</p>
+              <p class="title pop">Панк</p>
+              <p class="title pop">Эстрада</p>
+            </div>
+            <!-- /.sidebar -->
+            <!-- /.sidebar -->
+          </div>
+          <div class="contentleft">
+            <div class="filebox">
+              <!-- /.infoline -->
+              <div class="mp3ico"></div>
+              <div class="btn-wrapper">
+                <a href="{{ url }}" class="ok_btn btn sound" id="btn">
+                  <span class="btn-left">Слушать</span>
+                </a>
+                <div class="price">
+                  <p>
+                    <span class="line2">Первые 15 дней бесплатно<br/>далее 6 руб. за 1 день</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="tracks">
+              <h2>Популярные треки</h2>
+              <ul>
+                <li>ALMA - <span>Out of control</span></li>
+                <li>Мэвл - <span>Холодок</span></li>
+                <li>Alok Dynoro - <span>On and On</span></li>
+                <li>Loboda - <span>Новый рим</span></li>
+                <li>Тимати - <span>Я еду на джипе</span></li>
+                <li>Мэвл - <span>Патамушка</span></li>
+                <li>Emin - <span>Лирика</span></li>
+                <li>ATL - <span>Кривой эфир</span></li>
+                <li>Мохито - <span>Сон</span></li>
+              </ul>
+            </div>
+          </div>
+          <!-- /.contentleft -->
+          <!-- /.contentright -->
+        </div>
+        <!-- /.content -->
+      </div>
+      <!-- /.box -->
+      <!-- /.text -->
+    </div>
+    <!-- /.wrap -->
+  </div>
+  <!-- /.centering -->
+</div>
+<!-- /.all -->
+<div class="footer rulez rules">
+  <div class="player">
+  </div>
+  <p>Нажимая кнопку, вы активируете подписку на услугу "Музыка Билайн". Стоимость подписки - 15 дней бесплатно, далее 6р в день. Отключить подписку вы сможете бесплатно в любой момент. <a href="http://mob.beeline.ru/subscr/reg/tune">Пользовательское соглашение</a></p>
+</div>
+</body>
+</html>

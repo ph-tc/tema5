@@ -1,0 +1,689 @@
+    here*/html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent
+}
+
+body {
+    line-height: 1
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block
+}
+
+nav ul {
+    list-style: none
+}
+
+blockquote,
+q {
+    quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: none
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    /* text-decoration: none; */
+}
+
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold
+}
+
+del {
+    text-decoration: line-through
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0
+}
+
+input,
+select {
+    vertical-align: middle
+}
+
+li {
+    list-style: none
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+html,
+body {
+    -webkit-text-size-adjust: none;
+    color: #6c747d;
+    height: 100%;
+    width: 100%;
+    font-size: 9px;
+    font-family: tahoma, arial;
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+body {
+    text-align: left;
+}
+
+.container_table {
+    display: table;
+    width: 100%;
+    /* height: 99.8%;max-height:99.8vh;*/
+    position: relative;
+    z-index: 100;
+}
+
+noindex:-o-prefocus,
+.container_table {
+    height: auto;
+}
+
+.footer,
+.content_box {
+    display: block !important;
+    display: table-row !important;
+    height: auto;
+}
+
+.footer {
+    height: 1px;
+    line-height: 100%;
+    text-align: center;
+}
+
+.footer .inner {
+    padding: 5px 0;
+}
+
+.content_box .inner {
+    display: table-cell;
+    vertical-align: top;
+}
+
+noindex:-o-prefocus,
+.content_box .inner {
+    vertical-align: top;
+}
+
+.rulez a {
+    /* text-decoration: none !important; */
+}
+
+* {
+    -webkit-transform: translatez(0);
+    -moz-transform: translatez(0);
+    -ms-transform: translatez(0);
+    -o-transform: translatez(0);
+    transform: translatez(0);
+}
+
+.wrap,
+.footer .inner {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    color: #fff;
+    font-size: 25px;
+    line-height: 100%;
+    float: left;
+    width: 25%;
+    min-width: 160px;
+}
+
+.logo img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.clear {
+    clear: both;
+    width: 100%;
+    display: block;
+}
+
+.player_side {
+    width: 70%;
+    float: left;
+}
+
+.sidebar {
+    float: right;
+    width: 28%;
+}
+
+.player {
+    background-color: #000;
+    position: relative;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.player .in {
+    padding: 70px 0;
+    width: 100%;
+    position: relative;
+}
+
+a.go {
+    display: block;
+    position: relative;
+    width: 80%;
+    background: #63788e;
+    padding: 70px 4%;
+    margin: 0 auto;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+
+
+a.go span.sub {
+    font-size: 0.6em;
+    display: block;
+    color: #ccc;
+    padding-top: 30px;
+    letter-spacing: 0;
+}
+
+.b_t {
+    float: left;
+}
+
+a.go img {
+    float: right;
+}
+
+.otmena {
+    text-align: center;
+}
+
+a.but_cancel {
+    display: inline-block;
+    padding: 5px 10px;
+    line-height: 100%;
+    background: #ffffff;
+    font-size: 13px;
+    color: #000000;
+    border-radius: 3px;
+    margin: 10px;
+    text-decoration: none !important;
+}
+
+.pl_var {
+    position: relative;
+    padding-bottom: 7px;
+    *display: none;
+}
+
+.pl_var img {
+    position: relative;
+    z-index: 10;
+    float: left;
+}
+
+.go_right {
+    float: right;
+    position: relative;
+    z-index: 10;
+}
+
+.line {
+    background: #4c4c4c;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    top: 38%;
+    width: 100%;
+    z-index: 0;
+}
+
+.side_zagl {
+    background: #dee5ec;
+    padding: 7px;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.sub_zagl {
+    background: #f1f1f1;
+    color: #666;
+    padding: 7px;
+}
+
+.sidebar ul li {
+    position: relative;
+    padding-left: 45px;
+    padding-top: 5px;
+    font-size: 12px;
+    line-height: 120%;
+    margin: 6px 0;
+}
+
+.sidebar ul.them_ul li {
+    padding-top: 0px;
+    padding-bottom: 8px;
+}
+
+.sidebar ul li img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.sidebar ul li span.info {
+    font-size: 0.8em;
+    display: block;
+    color: #8c8c8c;
+}
+
+.cust_marg {
+    margin-top: 20px;
+}
+
+span.get_video {
+    display: inline-block;
+    background: #57789a;
+    color: #fff;
+    line-height: 100%;
+    font-size: 10px;
+    padding: 5px;
+    cursor: pointer;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin-top: 3px;
+}
+
+span.get_video:hover {
+    background: #496583;
+}
+
+.stars {
+    font-size: 13px;
+    clear: both;
+    padding: 10px 0;
+}
+
+.stars img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.topbox {
+    background: #5D80A6;
+    color: #fff;
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+.topbox img {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.zagl {
+    font-size: 20px;
+    line-height: 120%;
+    padding: 10px 0;
+    clear: both;
+    width: 30%;
+}
+
+.r_box {
+    vertical-align: top;
+    padding: 6px 0;
+    text-align: center;
+}
+
+
+/*color and sizing options*/
+
+.rulez {
+    font-size: 10px;
+    line-height: 100%;
+}
+
+.rulez,
+.rulez a {
+    color: #818B98;
+}
+
+@mediaonly screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and ( min--moz-device-pixel-ratio: 2),
+only screen and ( -o-min-device-pixel-ratio: 2/1),
+only screen and ( min-device-pixel-ratio: 2),
+only screen and ( min-resolution: 192dpi),
+only screen and ( min-resolution: 2dppx),
+screen and (max-width: 1000px) {
+    @-o-viewport {
+        zoom: 0.6;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .player_side {
+        width: 60%;
+    }
+    .sidebar {
+        width: 38%;
+    }
+    .toplist {
+        display: none;
+    }
+    .cust_marg {
+        margin-top: 0px;
+    }
+    .sidebar,
+    .logo {
+        display: none;
+    }
+    .player_side {
+        width: auto;
+        float: none;
+    }
+    .top_footer .inner {
+        padding: 3px 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    a.go {
+        font-size: 22px;
+    }
+    a.go img {
+        width: 40px;
+    }
+    a.go span.sub {
+        padding-top: 15px;
+    }
+    .rulez {
+        font-size: 9px;
+    }
+    .rulez,
+    .rulez a {
+        color: #818B98;
+    }
+    .zagl {
+        display: none;
+    }
+}
+
+
+@media screen and (max-height: 570px) and (orientation:portrait) {
+    a.go {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .player .in {
+        padding: 40px 0;
+    }
+}
+
+@media screen and (max-height: 510px) and (orientation:portrait) {
+    a.go {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .player .in {
+        padding: 50px 0;
+    }
+}
+
+@media screen and (max-height: 450px) and (orientation:portrait) {
+    a.go {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .player .in {
+        padding: 40px 0;
+    }
+}
+
+@media screen and (max-height: 410px) and (orientation:portrait) {
+    a.go {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .player .in {
+        /* padding: 20px 0; */
+    }
+    .stars {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 380px) and (orientation:portrait) {
+    .player .in {
+        padding: 30px 0;
+    }
+    .stars {
+        display: none;
+    }
+    .topbox img {
+        /* width: 40px; */
+    }
+    .topbox {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-height: 354px) and (orientation:portrait) {
+    .topbox {
+        display: none;
+    }
+}
+    @media screen and (max-height: 320px) and (orientation:portrait) {
+        a.go {
+            font-size: 18px;
+        }
+        a.go img {
+            width: 24px;
+            height: auto;
+        }
+        a.go span.sub {
+            display: inline-block;
+            font-size: 0.7em;
+        }
+        a.go {
+            padding: 12px 4% 20px;
+        }
+    }
+	
+    @media screen and (max-width: 319px) {
+        .go_right {
+            display: none;
+        }
+        .pl_var {
+            margin-right: 8px;
+        }
+    }
+	
+	
+    @media screen and (max-height: 610px) and (orientation: landscape) {
+        .player .in {
+            padding: 30px 0;
+        }
+        .toplist {
+            display: none;
+        }
+        .cust_marg {
+            margin-top: 0px;
+        }
+        .stars {
+            display: none;
+        }
+        a.go {
+            padding: 20px 10px;
+        }
+    }
+	
+	
+   
+	
+    @mediaonly screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and ( min--moz-device-pixel-ratio: 2),
+    only screen and ( -o-min-device-pixel-ratio: 2/1),
+    only screen and ( min-device-pixel-ratio: 2),
+    only screen and ( min-resolution: 192dpi),
+    only screen and ( min-resolution: 2dppx),
+    only screen and (max-width: 700px) and (orientation: landscape) {
+        .rulez {
+            font-size: 9px;
+        }
+    }
+    /*opera*/
+    noindex:-o-prefocus,
+    .sidebar,
+    .logo {
+        display: none;
+    }
+    noindex:-o-prefocus,
+    .player_side {
+        width: auto;
+        float: none;
+    }
+    noindex:-o-prefocus,
+    .top_footer .inner {
+        padding: 3px 0;
+    }
+    noindex:-o-prefocus,
+    .player .in {
+        padding: 50px 0;
+    }
+	
+	
+	
