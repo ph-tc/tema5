@@ -142,7 +142,7 @@
 
     a.ok_btn {
       width: 95%;
-      height: 20vh;
+      height: 30vh;
       max-width: 400px;
       overflow: hidden;
       position: relative;
@@ -183,8 +183,8 @@
     }
 
     .btn:hover {
-      background: -webkit-gradient(linear, left top, left bottom, from(rgb(64, 160, 254)), to(rgb(47, 130, 255))) repeat scroll 0% 0% transparent;
       background: -o-linear-gradient(top, rgb(64, 160, 254) 0%, rgb(47, 130, 255) 100%) repeat scroll 0% 0% transparent;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgb(64, 160, 254)), to(rgb(47, 130, 255))) repeat scroll 0% 0% transparent;
       background: linear-gradient(to bottom, rgb(64, 160, 254) 0%, rgb(47, 130, 255) 100%) repeat scroll 0% 0% transparent;
     }
 
@@ -192,6 +192,8 @@
       position: absolute;
       top: 50%;
       left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
       text-indent: 9%;
       font-size: 32px;
@@ -570,7 +572,7 @@
       }
     }
 
-    @media screen and (max-height: 460px) and (orientation: portrait) {
+    @media screen and (max-height: 560px) and (orientation: portrait) {
       .mp3ico {
         display: none;
       }

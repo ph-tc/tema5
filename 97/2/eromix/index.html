@@ -1,0 +1,973 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN"
+  "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+  <title>Видео
+  </title>
+  <style type="text/css">
+    html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: 0;
+      font-size: 100%;
+      vertical-align: baseline;
+      background: transparent
+    }
+
+    *, *::after, *::before {
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    body {
+      line-height: 1
+    }
+
+    article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+      display: block
+    }
+
+    nav ul {
+      list-style: none
+    }
+
+    blockquote, q {
+      quotes: none
+    }
+
+    blockquote:before, blockquote:after, q:before, q:after {
+      content: none
+    }
+
+    a {
+      margin: 0;
+      padding: 0;
+      font-size: 100%;
+      vertical-align: baseline;
+      background: transparent;
+      text-decoration: none
+    }
+
+    mark {
+      background-color: #ff9;
+      color: #000;
+      font-style: italic;
+      font-weight: bold
+    }
+
+    del {
+      text-decoration: line-through
+    }
+
+    abbr[title], dfn[title] {
+      border-bottom: 1px dotted;
+      cursor: help
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0
+    }
+
+    hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #ccc;
+      margin: 1em 0;
+      padding: 0
+    }
+
+    input, select {
+      vertical-align: middle
+    }
+
+    li {
+      list-style: none
+    }
+
+    *, *:before, *:after {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+
+    }
+
+    ul, li {
+      list-style: none;
+
+    }
+
+    html, body {
+      -webkit-text-size-adjust: none;
+      color: #cacaca;
+      height: 100%;
+      width: 100%;
+      font-size: 9px;
+      font-family: 'Open Sans', sans-serif;
+      background: #2d2d2d;
+    }
+
+    body {
+      text-align: left;
+
+    }
+
+    .container_table {
+      display: table;
+      width: 100%;
+      /* height: 99.8%;
+     max-height:99.8vh;
+     */
+      position: relative;
+      z-index: 100;
+      height: 100%;
+    }
+
+    noindex:-o-prefocus, .container_table {
+      height: auto;
+
+    }
+
+    .footer, .content_box {
+      display: block !important;
+      display: table-row !important;
+      height: auto;
+    }
+
+    .footer {
+      height: 1px;
+      line-height: 100%;
+      font-size: 16px;
+    }
+
+    .footer .inner {
+      padding: 5px 0;
+
+    }
+
+    .content_box .inner {
+      display: table-cell;
+      vertical-align: top;
+
+    }
+
+    noindex:-o-prefocus, .content_box .inner {
+      vertical-align: top;
+
+    }
+
+    .rulez a {
+      text-decoration: underline !important;
+
+    }
+
+    * {
+      -webkit-transform: translatez(0);
+      -moz-transform: translatez(0);
+      -ms-transform: translatez(0);
+      -o-transform: translatez(0);
+      transform: translatez(0);
+
+    }
+
+    .wrap, .footer .inner {
+      max-width: 1000px;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .logo img {
+      display: inline-block;
+      vertical-align: middle;
+
+    }
+
+    .clear {
+      clear: both;
+      width: 100%;
+      display: block;
+
+    }
+
+    .player_side {
+      width: 100%;
+      float: left;
+    }
+
+    .sidebar {
+      float: left;
+      width: 100%;
+      font-size: 12px;
+      padding: 0;
+    }
+
+    .player {
+      background-color: #000;
+      position: relative;
+      background-image: url(img/bg2.jpg);
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: center;
+    }
+
+    .player .in {
+      padding: 0;
+      width: 100%;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    a.go {
+      position: relative;
+      z-index: 2;
+      display: block;
+      width: 300px;
+      height: 150px;
+      line-height: 100px;
+      box-sizing: border-box;
+      background: rgba(0, 0, 0, 0.71);
+      padding: 0;
+      margin: 0 auto;
+      border-radius: 20px;
+      color: #fff;
+      font-size: 32px;
+
+      /* Chrome, Safari, Opera */
+      letter-spacing: 1px;
+      border: 2px solid rgb(255, 165, 0);
+    }
+
+    /* Chrome, Safari, Opera */
+    @-webkit-keyframes mig {
+      from {
+        background: #3a3939;
+
+      }
+      to {
+        background: #121212;
+
+      }
+
+    }
+
+    /* Standard syntax */
+    @keyframes mig {
+      from {
+        background: #545252;
+
+      }
+      to {
+        background: #121212;
+
+      }
+
+    }
+
+    a.go span.sub {
+      font-size: 0.4em;
+      display: block;
+      color: #a8a8a8;
+      padding-top: 30px;
+
+    }
+
+    .b_t {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 32px;
+    }
+
+    a.go img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 14px;
+      width: 50px;
+    }
+
+    .pl_var {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      padding-bottom: 7px;
+      background: #000;
+    }
+
+    .pl_var img {
+      position: relative;
+      z-index: 10;
+      float: left;
+
+    }
+
+    .go_right {
+      float: right;
+      position: relative;
+      z-index: 10;
+
+    }
+
+    .line {
+      background: #4c4c4c;
+      height: 2px;
+      position: absolute;
+      left: 0;
+      top: 38%;
+      width: 100%;
+      z-index: 0;
+
+    }
+
+    .side_zagl {
+      font-weight: bold;
+      padding: 5px 9px;
+    }
+
+    .sub_zagl {
+      padding: 5px 9px;
+      color: #777;
+    }
+
+    .sidebar ul li {
+      position: relative;
+      padding: 5px 10px;
+      line-height: 120%;
+      color: #4C6B90;
+    }
+
+    .sidebar ul.them_ul li {
+      padding-top: 0px;
+      padding-bottom: 8px;
+
+    }
+
+    .sidebar ul li img {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+    }
+
+    .sidebar ul li span.info {
+      font-size: 0.8em;
+      display: block;
+      color: #8c8c8c;
+
+    }
+
+    .cust_marg {
+      margin-top: 20px;
+
+    }
+
+    span.get_video {
+      display: inline-block;
+      background: #57789a;
+      color: #fff;
+      line-height: 100%;
+      font-size: 10px;
+      padding: 5px;
+      cursor: pointer;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      margin-top: 3px;
+
+    }
+
+    span.get_video:hover {
+      background: #496583;
+
+    }
+
+    .stars {
+      font-size: 13px;
+      clear: both;
+      padding: 10px 0;
+
+    }
+
+    .stars img {
+      display: inline-block;
+      vertical-align: middle;
+
+    }
+
+    .topbox {
+      background: #272727;
+      color: #fff;
+      font-size: 30px;
+      padding: 10px 0;
+    }
+
+    .topbox img {
+      vertical-align: middle;
+      display: inline-block;
+
+    }
+
+    .zagl {
+      font-size: 25px;
+      line-height: 120%;
+      padding: 10px 0;
+      clear: both;
+      width: 30%;
+
+    }
+
+    .r_box {
+      vertical-align: top;
+      padding: 0;
+      text-align: center;
+    }
+
+    /*color and sizing options*/
+    .rulez {
+      font-size: 10px;
+      line-height: 100%;
+      text-align: center;
+    }
+
+    .rulez, .rulez a {
+      color: #888888;
+    }
+
+    .top_zulez {
+      background: #fff;
+    }
+
+    .pi_cont {
+      padding: 5px 10px 5px 60px;
+      background-image: url(img/ava.jpg);
+      background-repeat: no-repeat;
+      background-size: 31px;
+      background-position: 11px 2px;
+    }
+
+    .pi_head {
+      font-weight: 700;
+      color: #ffffff;
+      word-wrap: break-word;
+    }
+
+    .pi_body {
+    }
+
+    .pi_text {
+      padding: 4px 0 0;
+      line-height: 1.5em;
+      word-wrap: break-word;
+      overflow: hidden;
+    }
+
+    .pi_info {
+      font-size: 12px;
+      color: #b5b4b4;
+    }
+
+    .slim_header {
+      font-size: 14px;
+      font-weight: 600;
+      word-wrap: break-word;
+      background-color: rgba(255, 255, 255, 0.11);
+      position: relative;
+      padding: 5px 7px;
+      color: #cecece;
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx), screen and (max-width: 1000px) {
+      @-o-viewport {
+        zoom: 0.6;
+
+      }
+
+    }
+
+    @media screen and (min-width: 769px) {
+      .rulez {
+        font-size: 10px;
+
+      }
+
+    }
+
+    @media screen and (max-width: 440px) {
+      .player_side {
+        width: 60%;
+
+      }
+
+      .sidebar {
+        width: 38%;
+
+      }
+
+      .toplist {
+        /* display: none; */
+      }
+
+      .cust_marg {
+        margin-top: 0px;
+
+      }
+
+      .sidebar, .logo {
+        /* display: none; */
+        float: left;
+        width: 100%;
+      }
+
+      .player_side {
+        width: auto;
+        float: none;
+
+      }
+
+      .top_footer .inner {
+        padding: 3px 0;
+
+      }
+
+    }
+
+    @media screen and (max-width: 550px) {
+      a.go {
+        /* font-size: 14px; */
+      }
+
+      a.go img {
+        /* width: 40px; */
+      }
+
+      a.go span.sub {
+        padding-top: 15px;
+
+      }
+
+      .zagl {
+        display: none;
+
+      }
+
+    }
+
+    @media screen and (max-width: 500px) {
+      .logo {
+        font-size: 18px;
+        min-width: 140px;
+
+      }
+
+    }
+
+    @media screen and (max-width: 319px) {
+      .go_right {
+        display: none;
+
+      }
+
+      .pl_var {
+        margin-right: 8px;
+
+      }
+
+    }
+
+    @media screen and (max-height: 570px) and (orientation: portrait) {
+      a.go {
+        /* padding-top: 60px; */
+        /* padding-bottom: 60px; */
+      }
+
+      .player .in {
+        padding: 110px 0;
+      }
+
+    }
+
+    @media screen and (max-height: 510px) and (orientation: portrait) {
+      a.go {
+        /* padding-top: 50px; */
+        /* padding-bottom: 50px; */
+      }
+
+      .player .in {
+        padding: 59px 0;
+      }
+
+    }
+
+    @media screen and (max-height: 450px) and (orientation: portrait) {
+      a.go {
+        /* padding-top: 30px; */
+        /* padding-bottom: 30px; */
+      }
+
+      .player .in {
+        padding: 20px 0;
+
+      }
+
+    }
+
+    @media screen and (max-height: 410px) and (orientation: portrait) {
+      a.go {
+        /* padding-top: 30px; */
+        /* padding-bottom: 30px; */
+      }
+
+      .player .in {
+        padding: 20px 0;
+
+      }
+
+      .stars {
+        display: none;
+
+      }
+
+    }
+
+    @media screen and (max-height: 380px) and (orientation: portrait) {
+      .player .in {
+        padding: 10px 0;
+
+      }
+
+      .stars {
+        display: none;
+
+      }
+
+      .topbox img {
+        width: 40px;
+
+      }
+
+      .topbox {
+        font-size: 20px;
+
+      }
+
+    }
+
+    @media screen and (max-height: 320px) and (orientation: portrait) {
+      a.go {
+        font-size: 18px;
+
+      }
+
+      a.go img {
+        width: 24px;
+        height: auto;
+
+      }
+
+      a.go span.sub {
+        display: inline-block;
+        font-size: 0.7em;
+
+      }
+
+      a.go {
+        padding: 12px 4% 20px;
+
+      }
+
+    }
+
+    @media screen and (max-height: 610px) and (orientation: landscape) {
+      .player .in {
+        padding: 30px 0;
+
+      }
+
+      .toplist {
+        display: none;
+
+      }
+
+      .cust_marg {
+        margin-top: 0px;
+
+      }
+
+      .stars {
+        display: none;
+
+      }
+
+      a.go {
+        /* padding: 50px 10px; */
+      }
+
+    }
+
+    .player .in {
+      padding: 90px 0 110px;
+    }
+
+    .toplist {
+      display: none \9;
+
+    }
+
+    .cust_marg {
+      margin-top: 0px \9;
+
+    }
+
+    .stars {
+      display: none \9;
+
+    }
+
+    a.go {
+      padding: 50px 10px \9;
+
+    }
+
+    a.go {
+      *padding: 20px 10px;
+
+    }
+
+    /*opera*/
+    noindex:-o-prefocus, .sidebar, .logo {
+      display: none;
+
+    }
+
+    noindex:-o-prefocus, .player_side {
+      width: auto;
+      float: none;
+
+    }
+
+    noindex:-o-prefocus, .top_footer .inner {
+      padding: 3px 0;
+
+    }
+
+    noindex:-o-prefocus, .player .in {
+      padding: 50px 0;
+
+    }
+
+    .show_btn {
+      z-index: 9;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      margin-bottom: 24px;
+    }
+
+    @media screen and (max-height: 570px) {
+      .sidebar {
+        font-size: 12px;
+      }
+    }
+
+    @media screen and (max-height: 480px) {
+      .sidebar {
+        font-size: 12px;
+      }
+    }
+
+    @media screen and (max-height: 460px) {
+      .side_zagl {
+        display: none;
+      }
+
+      .sub_zagl {
+        display: none;
+      }
+    }
+
+    @media screen and (max-height: 420px) {
+      .sidebar {
+        display: none;
+      }
+    }
+
+    .error {
+      display: block;
+      position: relative;
+      width: 100%;
+      padding: 0 4%;
+      margin: 0 auto;
+      border-radius: 15px;
+      color: #fff;
+      font-size: 16px;
+      text-align: center;
+      z-index: 1;
+    }
+
+
+    @media screen and (min-height: 540px) {
+      .player .in {
+        padding: 150px 0 120px;
+      }
+
+    }
+
+    .price {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 90;
+    }
+
+    .price p {
+      margin: 0;
+    }
+
+    .price .line2 {
+      display: inline-block;
+      margin: 5px auto 0;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 17px;
+      font-weight: normal;
+      line-height: 17px;
+      background-color: #000;
+      color: #777;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block !important;
+      height: auto;
+    }
+
+    .rules, .rules a {
+      font-size: 16px;
+      line-height: 13px;
+      text-align: center;
+      color: #777;
+    }
+
+    .rules a {
+      text-decoration: underline;
+    }
+
+    .rules p {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .placeholder {
+      display: table-row;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+<div class="container_table">
+  <div class="wrap">
+  </div>
+  <div class="topbox">
+    <div class="wrap"
+         style="font-weight:bold; font-size: 14px; padding-bottom: 1px; text-align: center; vertical-align: middle; white-space: nowrap; display: block; color: rgb(255, 255, 255); font-family: 'Open Sans', sans-serif;">
+      <img alt="#" src="img/s_menu.png"
+           style="position: absolute;left: 5px; padding-bottom: 1px; width: 17px; text-align: center; vertical-align: middle; white-space: nowrap; display: inline-block; color: rgb(255, 255, 255); height: 17px;"/>
+      <img alt="#" src="img/back.png"
+           style=" position: absolute; left: 30px; margin-left: 5px; padding-bottom: 1px; text-align: center; vertical-align: middle; white-space: nowrap; height: 17px; width: 10px; display: inline-block; color: rgb(255, 255, 255);"/>
+      Видеозаписи (18+)
+      <img alt="#" src="img/no_notify.png"
+           style=" position: absolute; right: 5px; padding-left: 10px; padding-right: 5px; padding-bottom: 1px; text-align: center; vertical-align: middle; white-space: nowrap; display: inline-block; color: rgb(255, 255, 255);"/>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="zagl"> Файл 662_hd.avi</div>
+  </div>
+  <div class="content_box">
+    <div class="inner">
+      <div class="wrap">
+        <div class="player_side">
+          <div class="player">
+            <div class="in">
+              <div class="show_btn">
+                <a
+                  href="{{ url }}"
+                  id="btn" class="go"> <img alt="#" src="img/play_btn.png"/> <span class="b_t"> Смотреть </span> </a>
+                <div class="price">
+                  <p>
+                    <span class="line2">Доступ 20 руб. в день</span>
+                  </p>
+                </div>
+              </div>
+              <div class="error"></div>
+              <div class="pl_var">
+                <img alt="#" src="img/play_sml.png"/>
+                <div class="go_right">
+                  <img alt="#" src="img/menu_1.png"/>
+                  <img alt="#" src="img/menu_2.png"/>
+                </div>
+                <div class="line">
+                </div>
+                <div class="clear">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.player -->
+        </div>
+        <!-- /.player_side -->
+        <div class="sidebar">
+          <div class="toplist">
+            <div class="side_zagl">
+              9 346 просмотров
+            </div>
+            <div class="sub_zagl">
+              Добавленно вчера
+            </div>
+            <h4 class="slim_header">комментарий</h4>
+            <div class="pi_cont">
+              <div class="pi_head">
+                Кирилл Тимошенко
+              </div>
+              <div class="pi_body">
+                <div class="pi_text">
+                  ОФИГЕТЬ ПРОСТО! Вот это да....
+                </div>
+                <div class="pi_info">
+                  вчера в 22:27
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.sidebar -->
+      </div>
+      <!-- /.wrap -->
+    </div>
+    <!-- /.inner -->
+  </div>
+  <!-- /.content_box -->
+  <div class="placeholder"></div>
+  <div class="footer rulez rules">
+    <div class="inner">
+      <p>Нажимая кнопку, вы активируете подписку на услугу "Эромикс". Стоимость подписки - 20 рублей в день. Отключить подписку вы сможете бесплатно в любой момент. <a href="http://mob.beeline.ru/subs/eromix/regulations">Пользовательское соглашение</a></p>
+    </div>
+  </div>
+  <!-- /.footer -->
+</div>
+<!-- /.container_table -->
+</body>
+</html>
