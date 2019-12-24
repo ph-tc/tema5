@@ -233,10 +233,13 @@
     }
 
     .videobar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
       background: #1e1e1e;
       padding: 5px;
       text-align: left;
-      position: relative;
     }
 
     .seek {
@@ -271,13 +274,15 @@
 
     .btn-wrapper {
       position: absolute;
-      top: 50%;
+      bottom: 0;
       left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
       width: 80%;
-      height: 20vh;
+      height: 30vh;
+      margin-bottom: 21px;
+      z-index: 30;
     }
 
     a.btn {
@@ -403,7 +408,7 @@
 
     /*color and sizing options*/
     html, body {
-      background: #b8bfc6;
+      background: #fff;
     }
 
     body {
@@ -702,13 +707,13 @@
               </p>
             </div>
           </div>
+          <div class="videobar">
+            <img src="img/play_min.png" alt="Play"/>
+            <div class="seek"></div>
+            <img class="vol" src="img/vol.png" alt="volume"/>
+          </div>
         </div>
         <!-- /.videobox -->
-        <div class="videobar">
-          <img src="img/play_min.png" alt="Play"/>
-          <div class="seek"></div>
-          <img class="vol" src="img/vol.png" alt="volume"/>
-        </div>
         <!-- /.videobar -->
         <div class="sovet">
           Видео сжато для экономии трафика

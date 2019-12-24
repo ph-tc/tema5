@@ -142,6 +142,7 @@
 
     a.ok_btn {
       width: 95%;
+      height: 20vh;
       max-width: 400px;
       overflow: hidden;
       position: relative;
@@ -152,7 +153,7 @@
       padding: 0;
       margin: 0;
       border: 0;
-      background: #fff; /* box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.32); */
+      background: #313539; /* box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.32); */
       border-radius: 6px;
     }
 
@@ -188,7 +189,10 @@
     }
 
     .btn span {
-      position: relative;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       text-indent: 9%;
       font-size: 32px;
     }
@@ -213,12 +217,17 @@
       padding: 30px 20px;
     }
 
+    .btn-left {
+      width: auto;
+      padding: 0;
+    }
+
 
     .btn-left:before {
       content: "";
       position: absolute;
       top: 50%;
-      left: 9px;
+      right: 100%;
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
@@ -442,7 +451,7 @@
       }
 
       .filebox {
-        padding-bottom: 50px;
+        padding-bottom: 40px;
       }
     }
 
@@ -561,7 +570,7 @@
       }
     }
 
-    @media screen and (max-height: 440px) and (orientation: portrait) {
+    @media screen and (max-height: 460px) and (orientation: portrait) {
       .mp3ico {
         display: none;
       }
